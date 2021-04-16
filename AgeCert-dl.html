@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>年齡認證</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <link rel="icon" href="https://img.itch.zone/aW1nLzQyMjcxODcucG5n/32x32%23/Fr8TDW.png" type="image/png">
+    <!--
+
+    TemplateMo 557 Grad School
+
+    https://templatemo.com/tm-557-grad-school
+
+    -->
+</head>
+
+  <body>
+      <section class="section video-2" data-section="section5" background-image="assets/images/akam/feedback-0.png">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6 align-self-center">
+                      <div class="left-content">
+                          <h4>【緋色之森下載板】</h4>
+                          <h4>本遊戲為<em>成年向</em><br />未滿十八歲不得遊玩。</h4>
+                          <br />
+                          <p>提醒您，遊玩期間請注意背後，並建議戴上耳機。</p>
+                          <br />
+                          <p>使用WASD或上下左右鍵可操作人物與選單；FR可轉動視角；CV可縮放視角；esc可跳出選單，點選「寫入愛愛筆記」可進行遊戲存檔。</p>
+                          <br />
+                          <p>目前確認支援windows系統。下載並解壓縮後讓所有內容放同一個資料夾下（解壓縮後不做任何動作即為此狀態），並點擊開啟「緋色之森 - 狼王與吸血鬼的舞曲.exe」。</p>
+                          <div class="main-button-2"><a rel="nofollow" href="#" target="_parent">尚未推出</a></div>
+
+
+                          <!--
+    <div class="main-button"><a rel="nofollow" href="https://bit.ly/2Qs5oQm" target="_parent">我已年滿十八歲。</a></div>
+    <div class="main-button-2"><a rel="nofollow" href="./index.html" target="_parent">我未年滿十八歲。</a></div>
+        -->
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <article class="video-item" >
+                          <figure >
+                              <img src="assets/images/akam/Age-1.png"></a>
+                          </figure>
+                      </article>
+                  </div>
+              </div>
+          </div>
+      </section>
+   
+      <!-- Scripts -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <script src="assets/js/isotope.min.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/lightbox.js"></script>
+      <script src="assets/js/tabs.js"></script>
+      <script src="assets/js/video.js"></script>
+      <script src="assets/js/slick-slider.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <script>
+          //according to loftblog tut
+          $('.nav li:first').addClass('active');
+
+          var showSection = function showSection(section, isAnimate) {
+              var
+                  direction = section.replace(/#/, ''),
+                  reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                  reqSectionPos = reqSection.offset().top - 0;
+
+              if (isAnimate) {
+                  $('body, html').animate({
+                      scrollTop: reqSectionPos
+                  },
+                      800);
+              } else {
+                  $('body, html').scrollTop(reqSectionPos);
+              }
+
+          };
+
+          var checkSection = function checkSection() {
+              $('.section').each(function () {
+                  var
+                      $this = $(this),
+                      topEdge = $this.offset().top - 80,
+                      bottomEdge = topEdge + $this.height(),
+                      wScroll = $(window).scrollTop();
+                  if (topEdge < wScroll && bottomEdge > wScroll) {
+                      var
+                          currentId = $this.data('section'),
+                          reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                      reqLink.closest('li').addClass('active').
+                          siblings().removeClass('active');
+                  }
+              });
+          };
+
+          $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+              if ($(e.target).hasClass('external')) {
+                  return;
+              }
+              e.preventDefault();
+              $('#menu').removeClass('active');
+              showSection($(this).attr('href'), true);
+          });
+
+          $(window).scroll(function () {
+              checkSection();
+          });
+      </script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+      <script>
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          var firebaseConfig = {
+              apiKey: "AIzaSyBJiy-0PxI-SOOq9pMEZFsHaB_H3VFJi4E",
+              authDomain: "akamgame-2.firebaseapp.com",
+              databaseURL: "https://akamgame-2.firebaseio.com",
+              projectId: "akamgame-2",
+              storageBucket: "akamgame-2.appspot.com",
+              messagingSenderId: "1032306716167",
+              appId: "1:1032306716167:web:3680f65d729819ed5b84a2",
+              measurementId: "G-S7045B6KJ2"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+      </script>
+  </body>
+</html>
